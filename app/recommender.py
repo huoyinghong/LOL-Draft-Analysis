@@ -8,7 +8,7 @@ def recommend_champions(draft_state: DraftState,champion_pool: dict,top_n: int =
     candidates = [
         champ for champ in champion_pool.values()
         if role in champ.roles and champ.name not in draft_state.ally_team.selected_champions()
-    ]#Only onsider champs match the role and hasnt been picked
+    ]#Only consider champs match the role and hasnt been picked
 
     results = []
     for candidate in candidates:

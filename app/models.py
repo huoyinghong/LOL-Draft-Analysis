@@ -6,18 +6,19 @@ from typing import List, Dict
 class Champion:
     name: str
     roles: List[str]
-    damage_type: str          # "AD", "AP", "Mixed"
-    tags: List[str]           # ["engage", "tank", "cc", "scaling"]
-    early_game: int           # 1-10
-    mid_game: int             # 1-10
-    late_game: int            # 1-10
-    mobility: int             # 1-10
-    cc: int                   # 1-10
-    durability: int           # 1-10
-    engage: int               # 1-10
-    peel: int                 # 1-10
-    split_push: int           # 1-10
-    teamfight: int            # 1-10
+    damage_type: str
+    tags: List[str]
+    early_game: int
+    mid_game: int
+    late_game: int
+    mobility: int
+    cc: int
+    durability: int
+    engage: int
+    peel: int
+    split_push: int
+    teamfight: int
+    comp_scores: Dict[str, int]
 
 
 @dataclass
