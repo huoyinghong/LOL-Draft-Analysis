@@ -19,33 +19,33 @@ def analyze_synergy(candidate: Champion, ally_team: TeamComp, champion_pool: dic
     dive_score = 0.0
 
     #Engage + follow-up synergy
-    ally_engage = sum(ch.engage for ch in allies)
-    ally_cc = sum(ch.cc for ch in allies)
+    ally_engage = sum(c.engage for c in allies)
+    ally_cc = sum(c.cc for c in allies)
     if ally_engage >= 7 or ally_cc >= 10:
         if candidate.teamfight >= 7 or candidate.engage >= 6:
             engage_followup_score = 3
             reasons.append(f"{candidate.name} can follow strong engage and teamfight setups well.")
 
     #Frontline + backline synergy
-    ally_frontline = sum(ch.durability for ch in allies)
+    ally_frontline = sum(c.durability for c in allies)
     if ally_frontline >= 12 and candidate.damage_type in ["AD", "AP"] and candidate.teamfight >= 6:
         front_back_score = 2
         reasons.append(f"{candidate.name} benefits from having frontline support in structured fights.")
 
     #Poke synergy
-    ally_poke_count = sum(1 for ch in allies if "poke" in ch.tags)
+    ally_poke_count = sum(1 for c in allies if "poke" in c.tags)
     if ally_poke_count >= 2 and "poke" in candidate.tags:
         poke_score = 3
         reasons.append(f"{candidate.name} strengthens an existing poke game plan.")
 
     #Peel synergy
-    ally_peel = sum(ch.peel for ch in allies)
+    ally_peel = sum(c.peel for c in allies)
     if ally_peel >= 8 and candidate.teamfight >= 6:
         protect_score = 2
         reasons.append(f"{candidate.name} works well with allies that can protect carries.")
 
     #Dive synergy
-    ally_dive_count = sum(1 for ch in allies if ch.comp_scores.get("dive", 0) >= 2)
+    ally_dive_count = sum(1 for c in allies if c.comp_scores.get("dive", 0) >= 2)
     if ally_dive_count >= 2 and candidate.comp_scores.get("dive", 0) >= 2:
         dive_score = 3
         reasons.append(f"{candidate.name} fits an allied dive-oriented setup.")

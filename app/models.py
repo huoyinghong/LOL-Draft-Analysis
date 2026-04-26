@@ -37,7 +37,7 @@ class TeamComp:#Picked champs
 class DraftState:
     ally_team: TeamComp
     enemy_team: TeamComp
-    pick_role: str            #mid
+    pick_role: str
 
 
 @dataclass

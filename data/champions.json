@@ -277,6 +277,7 @@
     "engage": 1,
     "peel": 2,
     "split_push": 2,
+    "split_push": 2,
     "teamfight": 6,
     "comp_scores": {
       "front_to_back": 1,
@@ -286,7 +287,7 @@
       "split_push": 0,
       "scaling": 2
     }
-    },
+  },
   {
     "name": "Karma",
     "roles": ["support"],
@@ -307,6 +308,126 @@
       "dive": 0,
       "poke": 3,
       "pick": 1,
+      "split_push": 0,
+      "scaling": 1
+    }
+  },
+  {
+    "name": "Jarvan IV",
+    "roles": ["jungle"],
+    "damage_type": "AD",
+    "tags": ["engage", "diver", "cc", "early_game", "teamfight"],
+    "early_game": 8,
+    "mid_game": 8,
+    "late_game": 6,
+    "mobility": 7,
+    "cc": 8,
+    "durability": 7,
+    "engage": 9,
+    "peel": 4,
+    "split_push": 3,
+    "teamfight": 8,
+    "comp_scores": {
+      "front_to_back": 2,
+      "dive": 3,
+      "poke": 0,
+      "pick": 2,
+      "split_push": 0,
+      "scaling": 1
+    }
+  },
+  {
+    "name": "Galio",
+    "roles": ["mid", "support"],
+    "damage_type": "AP",
+    "tags": ["tank", "engage", "peel", "teamfight", "cc", "anti_magic"],
+    "early_game": 5,
+    "mid_game": 7,
+    "late_game": 6,
+    "mobility": 5,
+    "cc": 8,
+    "durability": 8,
+    "engage": 8,
+    "peel": 8,
+    "split_push": 2,
+    "teamfight": 9,
+    "comp_scores": {
+      "front_to_back": 3,
+      "dive": 2,
+      "poke": 1,
+      "pick": 1,
+      "split_push": 0,
+      "scaling": 1
+    }
+  },
+  {
+    "name": "Kai'Sa",
+    "roles": ["adc"],
+    "damage_type": "AD",
+    "tags": ["marksman", "scaling", "dive", "hybrid_damage", "carry"],
+    "early_game": 5,
+    "mid_game": 7,
+    "late_game": 9,
+    "mobility": 7,
+    "cc": 1,
+    "durability": 3,
+    "engage": 4,
+    "peel": 1,
+    "split_push": 3,
+    "teamfight": 8,
+    "comp_scores": {
+      "front_to_back": 2,
+      "dive": 3,
+      "poke": 1,
+      "pick": 1,
+      "split_push": 0,
+      "scaling": 3
+    }
+  },
+  {
+    "name": "Lee Sin",
+    "roles": ["jungle"],
+    "damage_type": "AD",
+    "tags": ["early_game", "diver", "mobile", "pick", "skirmish"],
+    "early_game": 9,
+    "mid_game": 8,
+    "late_game": 5,
+    "mobility": 9,
+    "cc": 5,
+    "durability": 5,
+    "engage": 7,
+    "peel": 4,
+    "split_push": 3,
+    "teamfight": 6,
+    "comp_scores": {
+      "front_to_back": 1,
+      "dive": 3,
+      "poke": 0,
+      "pick": 3,
+      "split_push": 1,
+      "scaling": 0
+    }
+  },
+  {
+    "name": "Maokai",
+    "roles": ["jungle"],
+    "damage_type": "AP",
+    "tags": ["tank", "engage", "cc", "peel", "teamfight", "front_line"],
+    "early_game": 6,
+    "mid_game": 8,
+    "late_game": 7,
+    "mobility": 4,
+    "cc": 9,
+    "durability": 9,
+    "engage": 8,
+    "peel": 8,
+    "split_push": 2,
+    "teamfight": 9,
+    "comp_scores": {
+      "front_to_back": 3,
+      "dive": 2,
+      "poke": 1,
+      "pick": 2,
       "split_push": 0,
       "scaling": 1
     }

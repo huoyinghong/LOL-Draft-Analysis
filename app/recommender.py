@@ -1,5 +1,6 @@
 from app.models import DraftState, RecommendationResult
 from app.scorer import score_candidate
+from app.explain import explain_recommendation
 
 
 def recommend_champions(draft_state: DraftState,champion_pool: dict,top_n: int = 3) -> list[RecommendationResult]:
@@ -13,14 +14,12 @@ def recommend_champions(draft_state: DraftState,champion_pool: dict,top_n: int =
     results = []
     for candidate in candidates:
         total_score, breakdown = score_candidate(candidate, draft_state, champion_pool)
-
-        reasons = sorted(
-            breakdown.items(),
-            key=lambda x: x[1],
-            reverse=True
+        readable_reasons = explain_recommendation(
+            candidate,
+            draft_state,
+            champion_pool,
+            breakdown
         )
-
-        readable_reasons = [f"{k}: {v:.2f}" for k, v in reasons if v > 0]
 
         results.append(
             RecommendationResult(
